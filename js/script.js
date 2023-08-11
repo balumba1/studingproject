@@ -28,8 +28,8 @@
 
 // function rememberMyFilms() {
 //   for (let i = 0; i < 2; i++) {
-//     const a = prompt("Last film you watched?", ""),
-//       b = prompt("How good is was?", "");
+//     const a = prompt("Last film you watched?", "").trim(),
+//       b = prompt("How good is was?", "").trim();
 
 //     if (a != null && b != null && a != "" && b != "" && a.length < 50) {
 //       personalMovieDB.movies[a] = b;
@@ -293,3 +293,112 @@
 // const test = "12.2px"
 // console.log(parseInt(test));
 // console.log(parseFloat(test));
+
+// function calculateVolumeAndArea(side) {
+//   let volume = Math.pow(side, 3);
+//   let lengthOfCube = Math.pow(side, 2) * 6;
+//   if (typeof side !== "number" || side < 0 || !Number.isInteger(side)) {
+//     console.log("Error");
+//   } else {
+//     console.log("Volume of cube:", volume);
+//     console.log("Square of Cube:", lengthOfCube);
+//   }
+// }
+// calculateVolumeAndArea(5);
+
+// function getCoupeNumber(coupenumber) {
+//   if (coupenumber === 0 || coupenumber > 36) {
+//     console.log("This places is not avalible");
+//     return;
+//   }
+//   if (
+//     typeof coupenumber !== "number" ||
+//     coupenumber < 0 ||
+//     !Number.isInteger(coupenumber)
+//   ) {
+//     console.log("Check your place one more time pls");
+//     return;
+//   }
+//   console.log(Math.ceil(coupenumber / 4));
+// }
+// getCoupeNumber(5);
+
+// function getTimeFromMinutes(minutes) {
+//   if (typeof minutes === String || !Number.isInteger(minutes) || minutes < 0) {
+//     console.log("error");
+//     return;
+//   }
+//   let hours = 0;
+//   let min = minutes % 60;
+//   hours = minutes / 60;
+//   console.log("Hours:", Math.floor(hours), "Minutes:", min);
+// }
+
+// getTimeFromMinutes(-5);
+
+// function findMaxNumber(a, b, c, d) {
+//   if (
+//     typeof a !== "number" ||
+//     typeof b !== "number" ||
+//     typeof c !== "number" ||
+//     typeof d !== "number"
+//   ) {
+//     return 0;
+//   } else {
+//     console.log(Math.max(a, b, c, d));
+//   }
+// }
+// findMaxNumber(4, 5, 1, 8);
+
+// function fib(num) {
+//   if (typeof num !== "number" || num <= 0 || !Number.isInteger(num)) {
+//     return "";
+//   }
+
+//   let result = "";
+//   let first = 0;
+//   let second = 1;
+
+//   for (let i = 0; i < num; i++) {
+//     if (i + 1 === num) {
+//       result += `${first}`;
+//     } else {
+//       result += `${first} `;
+//     }
+
+//     let third = first + second;
+//     first = second;
+//     second = third;
+//   }
+//   console.log(result);
+//   return result;
+// }
+
+// fib(0);
+
+function first() {
+  //Do something
+  setTimeout(function () {
+    console.log(1);
+  }, 500);
+}
+function second() {
+  console.log(2);
+}
+first();
+second();
+
+
+function learnJS(lang, callback)
+{
+    console.log(`I Learn : ${lang}`);
+    callback(); 
+}
+
+function done()
+{
+    console.log('I pass this exam');
+}
+
+    
+learnJS('JavaScript,' done()); 
